@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react-router-dom';
+import {Link} from 'react-dom';
 import {
     Form,
     Button,
@@ -18,9 +19,13 @@ export default function LoginForm() {
     });
 
     return (
-        <Form>
-            {renderFields(credentials)}
-            <Button>Login</Button>
-        </Form>
+        <>
+            <Form>
+                {renderFields(credentials)}
+                <Button>Login</Button>
+            </Form> <br/>
+            - OR - <br/>
+            <Link to='#'>Create a new account</Link>
+        </>
     )
 }

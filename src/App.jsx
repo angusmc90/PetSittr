@@ -6,8 +6,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 
-
 import LoginForm from './components/Forms/LoginForm';
+import SignupForm from './components/Forms/SignupForm';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
     // <ThemeProvider theme={myTheme}>
     <>
     <LoginForm></LoginForm>
+    <SignupForm></SignupForm>
     </>
 
     // </ThemeProvider>
