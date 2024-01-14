@@ -1,14 +1,26 @@
 import { useState } from 'react';
+import { 
+    Form,
+    FormField,
+    Button,
+    Input 
+} from 'semantic-ui-react';
 
 export default function LoginForm() {
     const [credentials, SetCredentials] = useState({
-        email: '',
+        username: '',
         password:''
     });
 
     return(
-        <>
-            this is the login form
-        </>
+        <Form>
+            <FormField>
+                <Input placeholder='username' />
+            </FormField>
+            <FormField>
+                <Input placeholder='password' />
+            </FormField>
+            <Button>Login</Button>
+        </Form>
     )
 }
