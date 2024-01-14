@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { 
+import {
     Form,
     Button,
 } from 'semantic-ui-react';
@@ -17,7 +17,7 @@ export default function LoginForm() {
         },
     });
 
-    return(
+    return (
         <Form>
             {renderFields(credentials)}
             <Button>Login</Button>
