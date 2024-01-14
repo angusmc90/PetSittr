@@ -7,17 +7,13 @@ import SignupForm from '../components/Forms/SignupForm';
 
 export default function LoginPage() {
     const portals = [
-        { menuItem: 'Login', render: () => <TabPane><LoginForm/></TabPane> },
-        { menuItem: 'Signup', render: () => <TabPane><SignupForm/></TabPane> },
-      ]
-      
-  function showForm () {
+        { menuItem: 'Login', render: () => <TabPane><LoginForm /></TabPane> },
+        { menuItem: 'Signup', render: () => <TabPane><SignupForm /></TabPane> },
+    ]
 
-  }
-
-  return (
-    <>
-    <Tab panes={portals}></Tab>
-    </>
-  )
+    return (
+        <>
+            <Tab panes={portals}></Tab>
+        </>
+    )
 }
