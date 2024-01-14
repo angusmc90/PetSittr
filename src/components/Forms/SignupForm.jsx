@@ -31,9 +31,14 @@ export default function SignUpForm() {
     });
 
     return (
-        <Form>
-            {renderFields(credentials)}
-            <Button>Login</Button>
-        </Form>
+        <>
+            <Form>
+                {renderFields(credentials)}
+                <Button>Create Account</Button>
+            </Form>
+            <br/>
+            - OR - <br/>
+            Login to an existing account
+         </>
     )
 }

@@ -1,5 +1,5 @@
-import { useState } from 'react-router-dom';
-import {Link} from 'react-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Form,
     Button,
@@ -25,7 +25,7 @@ export default function LoginForm() {
                 <Button>Login</Button>
             </Form> <br/>
             - OR - <br/>
-            <Link to='#'>Create a new account</Link>
+            Create a new account
         </>
     )
 }

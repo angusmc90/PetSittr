@@ -7,13 +7,14 @@ import SignupForm from '../components/Forms/SignupForm';
 export default function LoginPage() {
   const [portal, setPortal] = useState('login')
 
+  function showForm () {
+    
+  }
+
   return (
-    // <ThemeProvider theme={myTheme}>
     <>
     <LoginForm></LoginForm>
     <SignupForm></SignupForm>
     </>
-
-    // </ThemeProvider>
   )
 }
