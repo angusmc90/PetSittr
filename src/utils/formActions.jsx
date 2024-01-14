@@ -1,3 +1,11 @@
+import { 
+    FormField,
+    Input 
+} from 'semantic-ui-react';
+
+function handleChange(e) {
+}
+
 function renderFields(e) {
     // return KVPs as an array
     const fieldsArr = Object.entries(e);
