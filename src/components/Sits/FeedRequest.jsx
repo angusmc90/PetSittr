@@ -8,28 +8,42 @@ import {
     Header,
     Image,
     Label,
+    LabelDetail,
     GridRow,
+    Icon,
 } from 'semantic-ui-react'
 
 
 export default function FeedSit() {
 
     return (
-        <Segment>
-            <Header as="h1">I need a Sittr!
-            <span>&nbsp;| n-Days</span> </Header>
+        <Container>
             <Container>
+            <Header as="h1">I need a Sittr!<span>&nbsp;| n-Days</span> </Header>
+            </Container>
+            <Container fluid>
             <Grid>
                 <GridColumn>
-                    <Image src="src/assets/defaultImgs/snoopy.png"/>
+                    <Image src="src/assets/defaultImgs/snoopy.png" />
                 </GridColumn>
                 <GridColumn>
                     <GridRow>
-                        <Label>UserName</Label>
+                        <Label>
+                            <Image src="src/assets/defaultImgs/forky.png"/>
+                            UserName
+                        </Label>
                     </GridRow>
                     <GridRow>
-                        <Label>Pet-1</Label>
-                        <Label>Pet-2</Label>
+                        <Label>
+                            <Icon name="paw" />
+                            Pet-1
+                            <LabelDetail>Cat</LabelDetail>
+                        </Label>
+                        <Label>
+                            <Icon name="paw" />
+                            Pet-2
+                            <LabelDetail>Dog</LabelDetail>
+                        </Label>
                     </GridRow>
                     <GridRow>
                         <p>Description</p>
@@ -37,6 +51,6 @@ export default function FeedSit() {
                 </GridColumn>
             </Grid>
             </Container>
-        </Segment>
+        </Container>
     )
 }
