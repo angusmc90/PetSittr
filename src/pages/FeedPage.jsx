@@ -7,6 +7,7 @@ import {
 } from 'semantic-ui-react'
 
 import NavBar from '../components/NavBar'
+import FeedSit from '../components/Sits/FeedRequest'
 
 export default function FeedPage() {
 
@@ -19,9 +20,9 @@ export default function FeedPage() {
             </Container>
 
             <Container fixed="top">
-                <Segment>this is a request for a sittr</Segment>
-                <Segment>this is a request for a sittr</Segment>
-                <Segment>this is a request for a sittr</Segment>
+                <FeedSit/>
+                <FeedSit/>
+                <FeedSit/>
             </Container>
         </>
     )

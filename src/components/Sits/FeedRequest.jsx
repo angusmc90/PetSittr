@@ -8,6 +8,7 @@ import {
     Header,
     Image,
     Label,
+    GridRow,
 } from 'semantic-ui-react'
 
 
@@ -16,17 +17,26 @@ export default function FeedSit() {
     return (
         <Segment>
             <Header as="h1">I need a Sittr!
-            <Header as="h2">&nbsp;| n-Days</Header> </Header>
+            <span>&nbsp;| n-Days</span> </Header>
+            <Container>
             <Grid>
                 <GridColumn>
-                    <Image/>
+                    <Image src="src/assets/defaultImgs/snoopy.png"/>
                 </GridColumn>
                 <GridColumn>
-                    User-Label<br/>
-                    Pet-Label(s)<br/>
-                    Desc
+                    <GridRow>
+                        <Label>UserName</Label>
+                    </GridRow>
+                    <GridRow>
+                        <Label>Pet-1</Label>
+                        <Label>Pet-2</Label>
+                    </GridRow>
+                    <GridRow>
+                        <p>Description</p>
+                    </GridRow>
                 </GridColumn>
             </Grid>
+            </Container>
         </Segment>
     )
 }
