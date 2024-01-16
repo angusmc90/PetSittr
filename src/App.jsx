@@ -7,6 +7,7 @@ import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 
 import LoginPage from './pages/LoginPage';
+import FeedPage from "./pages/FeedPage"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
     // adding a note to use a different library than semantic
     // <ThemeProvider theme={myTheme}>
     <>
-    <LoginPage></LoginPage>
+    <FeedPage></FeedPage>
     </>
 
     // </ThemeProvider>
