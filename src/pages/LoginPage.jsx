@@ -1,18 +1,36 @@
 import { useState } from 'react'
-import { TabPane, Tab } from 'semantic-ui-react'
+import {
+    Box,
+    Tabs,
+    TabList,
+    TabPanel,
+} from '@mui/material';
 
 import LoginForm from '../components/Forms/LoginForm';
 import SignupForm from '../components/Forms/SignupForm';
 
 export default function LoginPage() {
-    const portals = [
-        { menuItem: 'Login', render: () => <TabPane><LoginForm /></TabPane> },
-        { menuItem: 'Signup', render: () => <TabPane><SignupForm /></TabPane> },
-    ]
+
+    const [formName, setFormName] = useState('login')
+
+    const handleChange = (e, newValue) => {
+        setFormName(newValue)
+    }
 
     return (
-        <>
-            <Tab panes={portals}></Tab>
-        </>
-    )
-}
+        <Tabs value={formName} onChange={handleChange}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <TabList>
+              <Tab label="Login" value="login" />
+              <Tab label="Sign Up" value="signup" />
+            </TabList>
+          </Box>
+          <TabPanel value="login">
+            <LoginForm />
+          </TabPanel>
+          <TabPanel value="signup">
+            <SignupForm />
+          </TabPanel>
+        </Tabs>
+      );
+    }
