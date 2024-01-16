@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { 
-    TabPane, 
+import {
+    TabPane,
     Tab,
     Grid,
-    GridColumn, 
+    GridColumn,
     GridRow
 } from 'semantic-ui-react'
 
@@ -21,15 +21,14 @@ export default function LoginPage() {
     return (
         <>
             <NavBar></NavBar>
-            <Grid>
+            <Grid centered>
                 <GridRow>
-
-                <GridColumn width={8} stretched>
-                    <UserBio></UserBio>
-                </GridColumn>
-                <GridColumn width={4} stretched>
-                    <PetBio></PetBio>
-                </GridColumn>
+                    <GridColumn width={4} stretched>
+                        <UserBio></UserBio>
+                    </GridColumn>
+                    <GridColumn width={8} stretched>
+                        <PetBio></PetBio>
+                    </GridColumn>
                 </GridRow>
             </Grid>
         </>
