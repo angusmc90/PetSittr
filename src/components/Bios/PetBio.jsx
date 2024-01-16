@@ -8,11 +8,11 @@ import {
 } from 'semantic-ui-react'
 
 
-export default function UserBio() {
+export default function PetBio() {
 
     return (
         <>
-            This is the user bio section
+            This is the aside pet bio section
         </>
     )
 }
