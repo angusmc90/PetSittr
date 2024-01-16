@@ -12,6 +12,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    // adding a note to use a different library than semantic
     // <ThemeProvider theme={myTheme}>
     <>
     <LoginPage></LoginPage>
