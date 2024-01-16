@@ -3,10 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Link } from 'react-router-dom';
 import {
     Menu,
-    Container,
     MenuItem,
-    Grid,
-    GridColumn,
     Image
 } from 'semantic-ui-react'
 
