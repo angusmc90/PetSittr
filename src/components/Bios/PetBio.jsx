@@ -21,7 +21,7 @@ export default function PetBio() {
                     <GridColumn width={10}>
                         <Container>
                             
-                        Pet_Name_bold <Button>edit</Button><br/>
+                        Pet_Name_bold <Button floated='right'>edit</Button><br/>
                         </Container>
                         Pet_species, pet_age<br/>
                         Pet_bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
