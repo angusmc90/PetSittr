@@ -13,7 +13,7 @@ function App() {
     // adding a note to use a different library than semantic
     // <ThemeProvider theme={myTheme}>
     <>
-    <UserPage></UserPage>
+    <LoginPage/>
     </>
 
     // </ThemeProvider>
