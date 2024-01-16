@@ -7,6 +7,7 @@ import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 
 import LoginPage from './pages/LoginPage';
+import FeedPage from "./pages/FeedPage"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +15,7 @@ function App() {
   return (
     // <ThemeProvider theme={myTheme}>
     <>
-    <LoginPage></LoginPage>
+    <FeedPage></FeedPage>
     </>
 
     // </ThemeProvider>
