@@ -1,10 +1,6 @@
 import { useState } from 'react'
-import {
-    Box,
-    Tabs,
-    TabList,
-    TabPanel,
-} from '@mui/material';
+import { Box, Tabs, Tab } from '@mui/material';
+import { TabContext, TabList, TabPanel } from '@mui/lab';
 
 import LoginForm from '../components/Forms/LoginForm';
 import SignupForm from '../components/Forms/SignupForm';
