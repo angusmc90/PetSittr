@@ -4,7 +4,9 @@ import viteLogo from '/vite.svg'
 // import { ThemeProvider } from 'semantic-ui-react';
 // import myTheme from './react-semantic-theme';
 
-import UserPage from './pages/UserPage';
+import LoginPage from './pages/LoginPage';
+// import FeedPage from './pages/FeedPage';
+// import UserPage from './pages/UserPage';
 
 function App() {
   const [count, setCount] = useState(0)
