@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@mui/material';
-
+import { FormControl, Button } from '@chakra-ui/react'
 import { renderFields } from '../../utils/formActions'
 
 export default function LoginForm() {
@@ -16,9 +15,9 @@ export default function LoginForm() {
     });
 
     return (
-        <form>
+        <FormControl>
             {renderFields(credentials)}
             <Button>Login</Button>
-        </form>
+        </FormControl>
     )
 }

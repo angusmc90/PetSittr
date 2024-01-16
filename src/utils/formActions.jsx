@@ -1,5 +1,4 @@
-import { TextField } from '@mui/material';
-
+import { Input } from '@chakra-ui/react'
 
 
 
@@ -12,7 +11,9 @@ function renderFields(e) {
     // for each index in the array, create a field
     const fields = fieldsArr.map(([fieldName, fieldVal]) => (
         // come back to make this conditional for field types
-        <TextField key={fieldName} label={fieldName} value={fieldVal} />
+        console.log(fieldName),
+        console.log(fieldVal.value),
+        <Input key={fieldName} placeholder={fieldName} value={fieldVal.value}/>
     ))
     return fields;
 }

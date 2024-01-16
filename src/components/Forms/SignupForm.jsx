@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button } from '@mui/material';
-import { renderFields } from '../../utils/formActions'
+import { FormControl, Button } from '@chakra-ui/react'
+  import { renderFields } from '../../utils/formActions'
 
 
 export default function SignUpForm() {
@@ -28,9 +28,9 @@ export default function SignUpForm() {
     });
 
     return (
-        <form>
+        <FormControl>
             {renderFields(credentials)}
             <Button>Create Account</Button>
-        </form>
+        </FormControl>
     )
 }
