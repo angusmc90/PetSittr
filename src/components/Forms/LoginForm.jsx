@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-    Form,
-    Button,
-} from 'semantic-ui-react';
+import { Button } from '@mui/material';
 
 import { renderFields } from '../../utils/formActions'
 
@@ -20,13 +16,9 @@ export default function LoginForm() {
     });
 
     return (
-        <>
-            <Form>
-                {renderFields(credentials)}
-                <Button>Login</Button>
-            </Form> <br/>
-            - OR - <br/>
-            Create a new account
-        </>
+        <form>
+            {renderFields(credentials)}
+            <Button>Login</Button>
+        </form>
     )
 }

@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import {
-    Form,
-    Button,
-} from 'semantic-ui-react';
+import { Button } from '@mui/material';
 import { renderFields } from '../../utils/formActions'
 
 
@@ -31,14 +28,9 @@ export default function SignUpForm() {
     });
 
     return (
-        <>
-            <Form>
-                {renderFields(credentials)}
-                <Button>Create Account</Button>
-            </Form>
-            <br/>
-            - OR - <br/>
-            Login to an existing account
-         </>
+        <form>
+            {renderFields(credentials)}
+            <Button>Create Account</Button>
+        </form>
     )
 }
