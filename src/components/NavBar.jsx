@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import 'semantic-ui-css/semantic.min.css'
 import {
     Box,
     Flex,
@@ -9,29 +8,48 @@ import {
     Link,
     Text,
     IconButton,
+    Spacer,
+    Tag,
+    TagLabel,
+    Avatar,
+    Center
 } from '@chakra-ui/react';
 
 export default function NavBar() {
 
     return (
-        <HStack>
-            <Spacer/>
-            <Box>
-                <Link>
-                    <Image src="src/assets/defaultImgs/forky.png" size="mini" />
-                    Forkys_UN
-                </Link>
-            </Box>
-            <Spacer/>
-            <Box>
-                <Link>Open Requests</Link>
-                <Link>Reviews</Link>
-                <Link>Owner Search</Link>
-            </Box>
-            <Spacer/>
-            <Box>Logout -D-</Box>
-            <Spacer/>
-        </HStack>
+        <Box width="100vw" justifyContent="center">
+
+            <Center>
+                <Flex width="90%">
+
+                    <Box>
+                        <Link>
+                            <Tag size="lg">
+                                <Avatar name="userName" src="src/assets/defaultImgs/forky.png" size="sm" />
+                                <TagLabel>
+                                    Forkys_UN
+                                </TagLabel>
+                            </Tag>
+                        </Link>
+                    </Box>
+
+                    <Spacer />
+
+                    <Box>
+                        <Link>Open Requests</Link>
+                        <Link>Reviews</Link>
+                        <Link>Owner Search</Link>
+                    </Box>
+                    <Spacer />
+
+
+
+                    <Box>Logout -D- </Box>
+
+                </Flex>
+            </Center>
+        </Box>
 
     )
 }

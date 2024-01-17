@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 // import { ThemeProvider } from 'semantic-ui-react';
 // import myTheme from './react-semantic-theme';
 
-import LoginPage from './pages/LoginPage';
-// import FeedPage from './pages/FeedPage';
+// import LoginPage from './pages/LoginPage';
+import FeedPage from './pages/FeedPage';
 // import UserPage from './pages/UserPage';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     // adding a note to use a different library than semantic
     // <ThemeProvider theme={myTheme}>
     <>
-    <LoginPage/>
+    <FeedPage/>
     </>
 
     // </ThemeProvider>
