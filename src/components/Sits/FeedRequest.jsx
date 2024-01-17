@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import {
     Text,
     Card,
@@ -13,6 +13,9 @@ import {
     Avatar
 } from '@chakra-ui/react';
 
+
+import PetTags from '../Tags/PetTags';
+// import UserTag from '../Tags/UserTag';
 
 
 export default function FeedSit() {
@@ -41,25 +44,6 @@ export default function FeedSit() {
             }]
     })
 
-    const petTags = () => {
-        let pets = request.pets
-        return (
-            <HStack>
-                {pets.map((pet) => (
-
-                    <Tag key={pet.id} size="lg">
-                        <Avatar name={pet.name} src={pet.avatar} size="sm" />
-                        <TagLabel>
-                            {pet.name} |
-                            {pet.age} |
-                            {pet.species}
-                        </TagLabel>
-                    </Tag>
-                ))}
-            </HStack>
-        )
-
-    }
 
     return (
         <Card key={request.id}>
@@ -78,7 +62,7 @@ export default function FeedSit() {
                                     Forkys_UN
                                 </TagLabel>
                             </Tag>
-                            {petTags()}
+                            <PetTags pets={request.pets} />
                             <Text>
 
                             </Text>
