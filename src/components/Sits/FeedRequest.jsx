@@ -1,55 +1,50 @@
 import { useState } from 'react'
 import {
-    Segment,
-    Container,
-    Grid,
-    GridColumn,
-    Header,
+    Text,
+    Card, 
+    CardHeader, 
+    CardBody, 
+    CardFooter,
     Image,
-    Label,
-    LabelDetail,
-    GridRow,
-    Icon,
-} from 'semantic-ui-react'
+    Box,
+} from '@chakra-ui/react';
+
 
 
 export default function FeedSit() {
+    const [request, setRequest] = useState({
+        id: '54321',
+        title: 'I need a Sittr!',
+        user: 'UserName',
+        avatar: 'src/assets/defaultImgs/snoopy.png',
+        length: 5,
+        coverPhoto: 'src/assets/defaultImgs/forky.png',
+        description: 'The cat has been trying to kill me and the dog has started to help him. I just need a break. Please.',
+        pets: [
+            {
+                name: 'Pet-1',
+                species: 'Cat',
+                age: '3yrs'
+            },
+            {
+                ame: 'Pet-2',
+                species: 'Dog',
+                age: '2yrs'
+            }]
+
+    })
 
     return (
-        <Container>
-            <Container>
-            <Header as="h1">I need a Sittr!<span>&nbsp;| n-Days</span> </Header>
-            </Container>
-            <Container fluid>
-            <Grid>
-                <GridColumn>
-                    <Image src="src/assets/defaultImgs/snoopy.png" />
-                </GridColumn>
-                <GridColumn>
-                    <GridRow>
-                        <Label>
-                            <Image src="src/assets/defaultImgs/forky.png"/>
-                            UserName
-                        </Label>
-                    </GridRow>
-                    <GridRow>
-                        <Label>
-                            <Icon name="paw" />
-                            Pet-1
-                            <LabelDetail>Cat</LabelDetail>
-                        </Label>
-                        <Label>
-                            <Icon name="paw" />
-                            Pet-2
-                            <LabelDetail>Dog</LabelDetail>
-                        </Label>
-                    </GridRow>
-                    <GridRow>
-                        <p>Description</p>
-                    </GridRow>
-                </GridColumn>
-            </Grid>
-            </Container>
-        </Container>
+        <Card>
+            <CardHeader>
+                {request.title} <Text fontStyle="italic">&nbsp;| {request.length}-Days</Text>
+            </CardHeader>
+            <CardBody>
+                <Image/>
+                <Box>
+
+                </Box>
+            </CardBody>
+        </Card>
     )
 }

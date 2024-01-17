@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react';
 
 import NavBar from '../components/NavBar'
-// import FeedSit from '../components/Sits/FeedRequest'
+import FeedSit from '../components/Sits/FeedRequest'
 
 export default function FeedPage() {
 
@@ -18,9 +18,9 @@ export default function FeedPage() {
 
             <Container fixed="top" centerContent>
                 Sits
-                {/* <FeedSit/>
                 <FeedSit/>
-                <FeedSit/> */}
+                <FeedSit/>
+                <FeedSit/>
             </Container>
         </>
     )
