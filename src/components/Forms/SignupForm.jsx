@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FormControl, Button } from '@chakra-ui/react'
-  import { renderFields } from '../../utils/formActions'
+import { renderFields } from '../../utils/formActions'
 
 
 export default function SignUpForm() {
