@@ -17,7 +17,6 @@ export default function FeedPage() {
             </Container>
 
             <Container fixed="top" centerContent>
-                Sits
                 <FeedSit/>
                 <FeedSit/>
                 <FeedSit/>
