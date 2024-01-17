@@ -61,7 +61,7 @@ export default function FeedSit() {
                             <UserTag user={request.user}/>
                             <PetTags pets={request.pets} />
                             <Text>
-
+                                {request.description}
                             </Text>
                         </VStack>
                     </Box>
