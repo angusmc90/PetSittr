@@ -15,16 +15,18 @@ import {
 
 
 import PetTags from '../Tags/PetTags';
-// import UserTag from '../Tags/UserTag';
+import UserTag from '../Tags/UserTag';
 
 
 export default function FeedSit() {
     const [request, setRequest] = useState({
         id: '54321',
         title: 'I need a Sittr!',
-        user: 'UserName',
-        avatar: 'src/assets/defaultImgs/forky.png',
-        length: 5,
+        user: {
+            userName: 'userName',
+            avatar: 'src/assets/defaultImgs/forky.png',
+        },
+        numDays: 5,
         coverPhoto: 'src/assets/defaultImgs/snoopy.png',
         description: 'The cat has been trying to kill me and the dog has started to help him. I just need a break. Please.',
         pets: [
@@ -48,7 +50,7 @@ export default function FeedSit() {
     return (
         <Card key={request.id}>
             <CardHeader>
-                {request.title} <Text fontStyle="italic">&nbsp;| {request.length}-Days</Text>
+                {request.title} <Text fontStyle="italic">&nbsp;| {request.numDays}-Days</Text>
             </CardHeader>
             <CardBody>
                 <HStack>
@@ -56,12 +58,7 @@ export default function FeedSit() {
                     <Image src={request.coverPhoto} boxSize='150px' />
                     <Box>
                         <VStack>
-                            <Tag size="md">
-                                <Avatar name={request.user} src={request.avatar} size="xs" />
-                                <TagLabel>
-                                    Forkys_UN
-                                </TagLabel>
-                            </Tag>
+                            <UserTag user={request.user}/>
                             <PetTags pets={request.pets} />
                             <Text>
 
