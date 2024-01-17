@@ -2,12 +2,7 @@ import { useState } from 'react'
 import {
     Box,
     Flex,
-    Image,
-    Stack,
-    HStack,
     Link,
-    Text,
-    IconButton,
     Spacer,
     Tag,
     TagLabel,
