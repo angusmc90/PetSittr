@@ -5,8 +5,8 @@ import viteLogo from '/vite.svg'
 // import myTheme from './react-semantic-theme';
 
 // import LoginPage from './pages/LoginPage';
-import FeedPage from './pages/FeedPage';
-// import UserPage from './pages/UserPage';
+// import FeedPage from './pages/FeedPage';
+import UserPage from './pages/UserPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +15,7 @@ function App() {
     // adding a note to use a different library than semantic
     // <ThemeProvider theme={myTheme}>
     <>
-    <FeedPage/>
+    <UserPage/>
     </>
 
     // </ThemeProvider>
