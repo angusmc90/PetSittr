@@ -1,24 +1,21 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import { ThemeProvider } from 'semantic-ui-react';
-// import myTheme from './react-semantic-theme';
+import { Routes, Route } from 'react-router-dom'
 
-// import LoginPage from './pages/LoginPage';
-// import FeedPage from './pages/FeedPage';
+import LoginPage from './pages/LoginPage';
+import FeedPage from './pages/FeedPage';
 import UserPage from './pages/UserPage';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    // adding a note to use a different library than semantic
-    // <ThemeProvider theme={myTheme}>
-    <>
-    <UserPage/>
-    </>
-
-    // </ThemeProvider>
+    <Routes>
+      <Route path={'/login'} element={ <LoginPage/> }/>
+      <Route path={'/sits'} element={ <FeedPage/> }/>
+      <Route path={'/user'} element={ <UserPage/> }/>
+    </Routes>
   )
 }
 
