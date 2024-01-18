@@ -21,6 +21,7 @@ export default function LoginPage() {
     const [user, setUser] = useState(
         {
             username: 'userName',
+            preferredName: 'preferredName',
             pets: [
                 {
                     id: '1',
@@ -51,6 +52,8 @@ export default function LoginPage() {
     )
 
     const [veiw, setView] = useState('pets');
+
+    const numPets = user.pets.length
 
 
 
