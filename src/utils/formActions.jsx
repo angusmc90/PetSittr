@@ -1,7 +1,5 @@
 import { Input } from '@chakra-ui/react'
 
-
-
 function handleChange(e, newValue) {
 }
 
