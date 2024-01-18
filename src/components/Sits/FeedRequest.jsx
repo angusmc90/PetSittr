@@ -14,8 +14,8 @@ import {
 } from '@chakra-ui/react';
 
 
-import PetTags from '../Tags/PetTags';
-import UserTag from '../Tags/UserTag';
+import PetTags from '../ChakraTags/PetTags';
+import UserTag from '../ChakraTags/UserTag';
 
 
 export default function FeedSit() {
