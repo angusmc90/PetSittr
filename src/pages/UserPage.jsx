@@ -36,7 +36,7 @@ export default function LoginPage() {
                     name: 'Cliffod',
                     species: 'Dog?',
                     age: '2yrs',
-                    avatar: 'src/assets/defaultImgs/salem.png',
+                    avatar: 'src/assets/defaultImgs/clifford.png',
                     bio: 'Literally just an insurance nightmare. No one wants to talk about how this BIG. READ. MONSTER. is clearly not a dog.'
                 },
                 {

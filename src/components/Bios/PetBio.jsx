@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {
     Text,
     Card,
-    CardHeader,
+    Heading,
     CardBody,
     Image,
     Box,
@@ -15,12 +15,26 @@ import {
 
 
 export default function PetBio(props) {
-    const pet=props.pet
+    const pets=props.pets
 
     return (
-        <Card>
-            <Image src=""/>
-        </Card>
+        <VStack>
+            {pets.map((pet) => (
+                <Card id={pet.id}>
+                    <HStack>
+
+                    <Image src={pet.avatar} boxSize='120px'/>
+                    <VStack>
+                        <CardBody>
+                            <Heading size="md">{pet.name}</Heading>
+                            <Text>{pet.species}, {pet.age}</Text>
+                            <Text>{pet.bio}</Text>
+                        </CardBody>
+                    </VStack>
+                    </HStack>
+                </Card>
+            ))}   
+        </VStack>
     )
 }
         // <Container>
