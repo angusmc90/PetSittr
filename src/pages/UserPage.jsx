@@ -10,7 +10,14 @@ import {
     HStack,
     Tag,
     TagLabel,
-    Avatar
+    Avatar,
+    Spacer,
+    Container,
+    Tabs,
+    Tab,
+    TabList,
+    TabPanels,
+    TabPanel,
 } from '@chakra-ui/react';
 
 import NavBar from '../components/NavBar';
@@ -62,12 +69,31 @@ export default function LoginPage() {
     return (
         <>
             <NavBar />
-            <HStack>
-                <UserBio user={'placeholder'} />
-                <VStack>
-                    <PetBio pets={user.pets} />
-                </VStack>
-            </HStack>
+            <Container maxW='90%' margin='auto'>
+
+                <HStack width='full'>
+                    <UserBio user={'placeholder'} width='30%'/>
+                    <Spacer/>
+                    <Tabs isFitted variant="enclosed" width='65%'>
+                        <TabList>
+                            <Tab>Pets</Tab>
+                            <Tab>Active Requests</Tab>
+                            <Tab>Sittr Reviews</Tab>
+                        </TabList>
+                        <TabPanels>
+                            <TabPanel>
+                                <PetBio pets={user.pets} />
+                            </TabPanel>
+                            <TabPanel>
+                                Open requests will go here
+                            </TabPanel>
+                            <TabPanel>
+                                Reviews will go here
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>
+                </HStack>
+            </Container>
         </>
     )
 }

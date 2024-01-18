@@ -26,8 +26,10 @@ export default function PetBio(props) {
                     <Image src={pet.avatar} boxSize='120px'/>
                     <VStack>
                         <CardBody>
+                            <HStack>
                             <Heading size="md">{pet.name}</Heading>
                             <Text>{pet.species}, {pet.age}</Text>
+                            </HStack>
                             <Text>{pet.bio}</Text>
                         </CardBody>
                     </VStack>
