@@ -20,7 +20,7 @@ export default function PetBio(props) {
     return (
         <VStack>
             {pets.map((pet) => (
-                <Card id={pet.id}>
+                <Card key={pet.id} id={pet.id}>
                     <HStack>
 
                     <Image src={pet.avatar} boxSize='120px'/>

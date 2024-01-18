@@ -53,7 +53,9 @@ export default function LoginPage() {
 
     const [veiw, setView] = useState('pets');
 
-    const numPets = user.pets.length
+    const numPets = user.pets.length;
+
+    // const changeView = ()
 
 
 
@@ -62,7 +64,9 @@ export default function LoginPage() {
             <NavBar />
             <HStack>
                 <UserBio user={'placeholder'} />
-                <PetBio pets={user.pets} />
+                <VStack>
+                    <PetBio pets={user.pets} />
+                </VStack>
             </HStack>
         </>
     )
