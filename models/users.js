@@ -11,10 +11,13 @@ const userSchema = new mongoose.Schema(
         email: {
             type: String,
         },
-        fullName: {
+        preferredName: {
             type: String,
         },
         location: {
+            type: String,
+        },
+        bio:{
             type: String,
         },
         pets: [{

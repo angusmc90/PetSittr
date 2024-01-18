@@ -2,10 +2,13 @@ import { useState } from 'react'
 import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 
-import LoginForm from '../components/Forms/LoginForm';
-import SignupForm from '../components/Forms/SignupForm';
+// import LoginForm from '../components/Forms/LoginForm';
+// import SignupForm from '../components/Forms/SignupForm';
+import Form from '../components/Form';
 
-export default function LoginPage() {
+export default function LoginPage(props) {
+    const loginForm = props.loginCredentials
+    const signupForm = props.signupCredentials
 
     // const [formName, setFormName] = useState('login')
 
@@ -23,10 +26,10 @@ export default function LoginPage() {
 
                 <TabPanels>
                     <TabPanel>
-                        <LoginForm />
+                        <Form formFields={loginForm}/>
                     </TabPanel>
                     <TabPanel>
-                        <SignupForm />
+                    <Form formFields={signupForm}/>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
