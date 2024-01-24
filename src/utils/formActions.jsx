@@ -1,9 +1,6 @@
 import { Input } from '@chakra-ui/react'
 
-function handleChange(e, newValue) {
-}
-
-function renderFields(e) {
+function renderFields(e, handleChange) {
     // return KVPs as an array
     const fieldsArr = Object.entries(e);
     // for each index in the array, create a field
@@ -11,7 +8,10 @@ function renderFields(e) {
         // come back to make this conditional for field types
         console.log(fieldName),
         console.log(fieldVal.value),
-        <Input key={fieldName} placeholder={fieldName} value={fieldVal.value}/>
+        <Input key={fieldName} 
+            placeholder={fieldName} 
+            value={fieldVal.value}
+            onChange={(e)=> handleChange(fieldName, e.target.value)}/>
     ))
     return fields;
 }
