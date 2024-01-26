@@ -33,7 +33,7 @@ export default function LoginPage() {
           value: '',
         },
         profilePic: {
-          type: File,
+          type: 'File',
           value: '',
         },
       })
