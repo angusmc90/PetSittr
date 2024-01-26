@@ -11,8 +11,6 @@ function renderFields(e, handleChange) {
     // for each index in the array, create a field
     return fieldsArr.map(([fieldName, fieldVal]) => {
         if (fieldVal.type === 'File') {
-            console.log('FILE FILE FILE')
-            console.log(fieldVal.type)
             return (
                 <>
                 <input key={fieldName}

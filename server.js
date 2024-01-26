@@ -20,15 +20,19 @@ app.use(require("./config/auth"));
 // Mount routes here
 // app.use('/', routerNamer)
 
+if (process.env.IS_PRODUCTION) {
+    console.log('PRODUCTION')
+}
 
 // "catch all" routes
 if (process.env.IS_PRODUCTION) {
     // don't think I need PWA features so this might not be needed?
-    // const manifest = require('./dist/manifest.json');
+    const manifest = require('./dist/manifest.json');
     app.use(express.static(path.join(__dirname, "dist")));
     // "catch all" route
     app.get('/*', function (req, res) {
         res.render(path.join(__dirname, 'dist', 'index.ejs'), { manifest });
+        // res.render(path.join(__dirname, 'dist', 'index.ejs'),);
     });
 }
 app.get('/*', function (req, res) {
