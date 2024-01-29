@@ -1,7 +1,5 @@
 import { Input } from '@chakra-ui/react'
 
-
-
 // https://www.reddit.com/r/reactjs/comments/19fejui/cant_seem_to_get_my_form_to_dynamically_render/
 
 
