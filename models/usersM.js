@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema(
         preferredName: {
             type: String,
         },
+        profilePic:{
+            type: String,
+        },
         location: {
             type: String,
         },
@@ -84,4 +87,5 @@ userSchema.methods.comparePassword = function (tryPassword, cb) {
         cb(null, isMatch);
     });
 };
+
 module.exports = mongoose.model("User", userSchema);
